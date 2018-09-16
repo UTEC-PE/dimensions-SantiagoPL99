@@ -28,11 +28,13 @@ struct Integer
 
 int main(int argc, char *argv[])
 {
-    int dimensionSizes[2]={3,3};
-    int dimensions = 2;
-    int coordinates[2]={1,1};
-    Vector<Integer> vector(dimensions, dimensionSizes);
-    vector.set(2,coordinates):
+    int array[2]={3,3};
+    int *dimen=array;
+    Vector <Integer>vector(2,dimen);
+    int array2[2]={0,1};
+    int *coord=array2;
+    vector.set(3,coord);
+    cout<<vector.get(coord)<<endl;
 
     system("pause");
     return EXIT_SUCCESS;

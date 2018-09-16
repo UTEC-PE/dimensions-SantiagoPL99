@@ -14,6 +14,9 @@ class Vector {
         int dimensions;
         int* dimensionSizes;
 
+        Operation cmp;
+
+
     public:
         Vector() : data(nullptr) {};
              
@@ -28,13 +31,13 @@ class Vector {
              
         void set(T datum, int* coordinates)
         {
-            int pos = convertir(coordinates,dimensionSizes,dimensions);
-            data[pos] = datum;
+            int pos=cmp(coordinates,dimensionSizes,dimensions);
+            data[pos]=datum;
         };
              
         T get(int* coordinates)
         {
-            int pos = convertir(coordinates,dimensionSizes,dimensions);
+            int pos=cmp(coordinates,dimensionSizes,dimensions);
             return data[pos];
         };
 };
