@@ -10,8 +10,8 @@ struct Dimensions
 {
     int operator()(int* coordinates, int* sizes, int dimensions)
     {
-        float acum = 1;
-        float sum = coordinates[0];
+        int acum = 1;
+        int sum = coordinates[0];
         for (int i = 0; i < dimensions-1; i++)
         {
             acum *= sizes[i];
