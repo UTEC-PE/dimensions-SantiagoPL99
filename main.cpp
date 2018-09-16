@@ -17,6 +17,7 @@ struct Dimensions
             acum *= sizes[i];
             sum += acum*coordinates[i+1];
         }
+        return sum;
     }
 };
 
