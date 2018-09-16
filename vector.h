@@ -28,12 +28,14 @@ class Vector {
              
         void set(T datum, int* coordinates)
         {
-            // TODO
+            int pos = convertir(coordinates,dimensionSizes,dimensions);
+            data[pos] = datum;
         };
              
         T get(int* coordinates)
         {
-            // TODO
+            int pos = convertir(coordinates,dimensionSizes,dimensions);
+            return data[pos];
         };
 };
 
